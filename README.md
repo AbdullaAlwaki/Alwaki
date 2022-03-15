@@ -3,8 +3,68 @@
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
+![alt text](../../Downloads/image.jpg)
 
-<!---
-AbdullaAlwaki/AbdullaAlwaki is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+# Abdulla Alwaki
+
+## Live in berlin
+
+---
+
+### Email
+
+**abdulla@icloud.com**
+
+---
+
+---
+
+_Naitonality_
+
+> Syria
+
+---
+
+## programming languages
+
+1. Java Script
+2. python
+3. html
+4. css
+
+---
+
+## project
+
+- videoplayer
+- Ramadan timer
+- ScrapingWikipedia
+
+---
+
+## `code js`
+
+---
+
+## [portofolio](https://abdullaalwaki.github.io/portofolio/)
+
+---
+
+## Table
+
+| Syntax | Description |
+| ------ | ----------- |
+| heaer  | Title       |
+| p      | text        |
+
+---
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+---
