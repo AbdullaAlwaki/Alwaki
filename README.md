@@ -7,7 +7,7 @@
 
 # Abdulla Alwaki
 
-## Live in berlin
+## Life in berlin
 
 ---
 
