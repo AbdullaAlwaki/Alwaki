@@ -7,7 +7,7 @@
 
 # Abdulla Alwaki
 
-## Life in berlin
+## Life in Berlin
 
 ---
 
@@ -58,13 +58,5 @@ _Naitonality_
 | p      | text        |
 
 ---
-
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
 
 ---
