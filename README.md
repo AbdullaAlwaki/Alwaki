@@ -57,6 +57,5 @@ _Naitonality_
 | p      | text        |
 
 ---
-[My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/)
-[demo](https://example.com){target="_blank"}
+[My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki?target=_blank)
 ---
