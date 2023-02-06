@@ -57,5 +57,6 @@ _Naitonality_
 | p      | text        |
 
 ---
-[My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/){:target="_blank"}
+[My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/)
+[Opens in new tab](https://external.ink?to=/placeholder.com)
 ---
