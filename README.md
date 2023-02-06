@@ -58,5 +58,5 @@ _Naitonality_
 
 ---
 [My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/)
-[Opens in new tab](https://external.ink?to=/placeholder.com)
+[demo](https://example.com){target="_blank"}
 ---
