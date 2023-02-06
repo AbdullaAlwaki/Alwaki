@@ -46,7 +46,6 @@ _Naitonality_
 
 ---
 
-## [portofolio](https://abdullaalwaki.github.io/portofolio/)
 
 ---
 
@@ -58,5 +57,5 @@ _Naitonality_
 | p      | text        |
 
 ---
-[My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/)
+[My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/){:target="_blank"}
 ---
