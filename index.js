@@ -9,6 +9,7 @@ const side = document.querySelector(".side");
 const homeLi = document.querySelector(".li-home");
 const contactLi = document.querySelector(".li-contact");
 const portfolioLi = document.querySelector(".li-Portfolio");
+const hamburger = document.querySelector("#hamburger");
 const Home = `<div class="home">
 <div class="main-content">
 <h1>Hi, I'm Abdulla Alwaki</h1>
@@ -101,6 +102,41 @@ const Contact = `<div id="Contact" >
 </p>
 </div> 
 </div>`;
+
+const hum = `<div class="burger-icon">
+  <div class="burger-container">
+    <span class="burger-bun-top"></span>
+    <span class="burger-filling"></span>
+    <span class="burger-bun-bot"></span>
+  </div>
+</div>
+
+<div class="burger-ring">
+  <svg class="svg-ring">
+    <path
+      class="path"
+      fill="none"
+      stroke="#fff"
+      stroke-miterlimit="10"
+      stroke-width="4"
+      d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"
+    />
+  </svg>
+</div>
+
+<svg width="0" height="0">
+  <mask id="mask">
+    <path
+      fill="none"
+      stroke="#ff0000"
+      stroke-miterlimit="10"
+      stroke-width="4"
+      d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4"
+    />
+  </mask>
+</svg>
+` ;
+
 // contact.innerHTML = Contact;
 main.innerHTML = Home;
 active.forEach((link) => {
@@ -129,11 +165,14 @@ active.forEach((link) => {
       main.innerHTML = Home;
       main.classList.remove("black");
       main.classList.add("white");
+      hamburger.style.color = "white";
     }
     if (aboutLi.classList.contains("active")) {
         main.innerHTML = About;
         main.classList.remove("white");
         main.classList.add("black");
+        hamburger.style.color = "black";
+
         }
     if (portfolioLi.classList.contains("active")) {
         main.innerHTML = portfolio; 
@@ -148,3 +187,23 @@ active.forEach((link) => {
   });
 
 });
+hamburger.innerHTML = hum;
+if(window.innerWidth < 768){
+  side.style.display = "none";
+  hamburger.style.display = "block";
+}
+
+if(window.innerWidth > 768){
+  side.style.display = "flex";
+  hamburger.style.display = "none";
+}
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("is-open");
+        hamburger.classList.toggle("is-closed");
+        if(hamburger.classList.contains("is-open")){
+          side.style.display = "flex";
+        }
+        if(hamburger.classList.contains("is-closed")){
+          side.style.display = "none";
+        }
+      });
