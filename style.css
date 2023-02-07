@@ -21,7 +21,26 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.8s;
 }
+
+.side-active{
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  transition: 0.8s;
+}
+
+.side-active li{
+  color: #000;
+  transition: 0.8s;
+}
+
+.side-active li:hover{
+  background: #000;
+  color: #fff;
+  transition: 0.8s;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -47,19 +66,69 @@ li {
   border-bottom: 1px solid #fff;
 }
 
+
+li::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
 li:hover {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   color: #000;
+  transition: 0.8s;
+  width: 100%;
 }
 
-li:hover a {
+.active {
+  background-color: rgb(255, 0, 0);
   color: #000;
+  border: none;
 }
 
-.main {
-  width: 70%;
-  padding-left: 30%;
+.t{
+  animation: op;
+  animation-duration: 1s;
+}
+
+.white {
+  animation: white 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes white {
+  0% {
+    background: #000;
+  }
+  100% {
+    background: #fff;
+  }
+}
+
+.black {
+  animation: black 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes black {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #000;
+  }
+  
+}
+
+
+.home {
+  width: 75%;
+  padding-left: 25%;
   color: #000;
+  transition: 0.8s;
 }
 
 .main-content {
@@ -70,6 +139,7 @@ li:hover a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
 }
 
 h1 {
@@ -96,10 +166,9 @@ p {
 }
 
 #about {
-  width: 70%;
+  width: 75%;
   height: 100vh;
-  padding-left: 30%;
-  background: #000;
+  padding-left: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,3 +249,12 @@ p {
     object-fit: cover;
 }
 
+#Contact{
+    width: 70%;
+    height: 100vh;
+    padding-left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
