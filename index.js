@@ -63,25 +63,6 @@ active.forEach((link) => {
     ) {
       side.classList.add("side-active");
           }
-
-    // if (homeLi.classList.contains("active")) {
-    //   main.classList.remove("black");
-    //   main.classList.add("white");
-    //   hamburger.style.color = "white";
-    // }
-    // if (aboutLi.classList.contains("active")) {
-    //   main.classList.remove("white");
-    //   main.classList.add("black");
-    //   hamburger.style.color = "black";
-    // }
-    // if (portfolioLi.classList.contains("active")) {
-    //   main.classList.remove("black");
-    //   main.classList.add("white");
-    // }
-    // if (contactLi.classList.contains("active")) {
-    //   main.classList.remove("white");
-    //   main.classList.add("black");
-    // }
   });
 });
 hamburger.addEventListener("click", function () {
@@ -106,7 +87,7 @@ const onSubmit = () => {
   };
   try {
     
-    fetch("http://localhost:5000/portfolio/contact", {
+    fetch("https://main-be-nv16.onrender.com", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
