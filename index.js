@@ -1,8 +1,5 @@
 const main = document.querySelector("#main");
-// const home = document.querySelector(".home");
-// const about = document.querySelector("#about");
 const portfolio = document.querySelector("#Portfolio");
-// const contact = document.querySelector("#Contact");
 const active = document.querySelectorAll("li");
 const aboutLi = document.querySelector(".li-about");
 const side = document.querySelector(".side");
@@ -87,7 +84,7 @@ const onSubmit = () => {
   };
   try {
     
-    fetch("https://main-be-nv16.onrender.com", {
+    fetch("https://main-be-nv16.onrender.com/portfolio/contact", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
