@@ -56,34 +56,32 @@ active.forEach((link) => {
     ) {
       side.classList.remove("side-active");
       side.classList.add("side");
-      console.log(side);
     }
     if (
       aboutLi.classList.contains("active") ||
       contactLi.classList.contains("active")
     ) {
       side.classList.add("side-active");
-      console.log(side);
-    }
+          }
 
-    if (homeLi.classList.contains("active")) {
-      main.classList.remove("black");
-      main.classList.add("white");
-      hamburger.style.color = "white";
-    }
-    if (aboutLi.classList.contains("active")) {
-      main.classList.remove("white");
-      main.classList.add("black");
-      hamburger.style.color = "black";
-    }
-    if (portfolioLi.classList.contains("active")) {
-      main.classList.remove("black");
-      main.classList.add("white");
-    }
-    if (contactLi.classList.contains("active")) {
-      main.classList.remove("white");
-      main.classList.add("black");
-    }
+    // if (homeLi.classList.contains("active")) {
+    //   main.classList.remove("black");
+    //   main.classList.add("white");
+    //   hamburger.style.color = "white";
+    // }
+    // if (aboutLi.classList.contains("active")) {
+    //   main.classList.remove("white");
+    //   main.classList.add("black");
+    //   hamburger.style.color = "black";
+    // }
+    // if (portfolioLi.classList.contains("active")) {
+    //   main.classList.remove("black");
+    //   main.classList.add("white");
+    // }
+    // if (contactLi.classList.contains("active")) {
+    //   main.classList.remove("white");
+    //   main.classList.add("black");
+    // }
   });
 });
 hamburger.addEventListener("click", function () {
@@ -120,8 +118,4 @@ const onSubmit = () => {
   } catch (error) {
     console.log(error);
   }
-
-  name= "";
-  email= "";
-  text= "";
 };
