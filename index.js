@@ -51,27 +51,6 @@ active.forEach((link) => {
       link.classList.remove("active");
     });
     link.classList.add("active");
-    if (
-      homeLi.classList.contains("active") ||
-      portfolioLi.classList.contains("active")
-    ) {
-      side.classList.remove("side-active");
-      side.classList.add("side");
-      svg.forEach((svg) => {
-        svg.style.backgroundColor = "white";
-      });
-      svgRing.style.stroke = "white";
-    }
-    if (
-      aboutLi.classList.contains("active") ||
-      contactLi.classList.contains("active")
-    ) {
-      side.classList.add("side-active");
-      svg.forEach((svg) => {
-        svg.style.backgroundColor = "black";
-      });
-      svgRing.style.stroke = "black";
-    }
   });
 });
 
@@ -120,6 +99,12 @@ const onSubmit = () => {
 
 // log when scroll
 window.addEventListener("scroll", () => {
+  if (window.scrollY > 0 && window.scrollY < 700 || window.scrollY > 1700 && window.scrollY < 2600) {
+    side.classList.remove("side-active");
+    side.classList.add("side");
+    } else if( window.scrollY > 700 && window.scrollY < 1700 || window.scrollY > 2600 && window.scrollY < 3100) {
+    side.classList.add("side-active");
+  }
   if (
     (window.scrollY > 0 &&
       window.scrollY < 640 &&
