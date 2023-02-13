@@ -7,23 +7,27 @@ const homeLi = document.querySelector(".li-home");
 const contactLi = document.querySelector(".li-contact");
 const portfolioLi = document.querySelector(".li-Portfolio");
 const hamburger = document.querySelector("#hamburger");
+const svg = document.querySelectorAll(".svg");
+const svgRing = document.querySelector(".svg-ring");
 
 const projects = [
   {
     title: "Restaurant Website",
     img: "./images/restaurant.gif",
-    description: "",
+    description: "In this project I built a website for a restaurant using frontend and backend technologies",
     link: "https://mern-restaurant.onrender.com/",
   },
   {
-    title: "Project 2",
-    img: "https://picsum.photos/200/300",
+    title: "video player",
+    img: "./images/player.gif",
     description: "Project 2 description",
+    link: "https://abdullaalwaki.github.io/videoplyer/"
   },
   {
     title: "Project 3",
-    img: "https://picsum.photos/200/300",
+    img: "./images/Ramadantimer.gif",
     description: "Project 3 description",
+    link: "https://abdullaalwaki.github.io/RamadanTimer/"
   },
 ];
 const port = `
@@ -53,23 +57,40 @@ active.forEach((link) => {
     ) {
       side.classList.remove("side-active");
       side.classList.add("side");
+      svg.forEach((svg) => {
+        svg.style.backgroundColor = "white";
+      });
+      svgRing.style.stroke = "white";
     }
     if (
       aboutLi.classList.contains("active") ||
       contactLi.classList.contains("active")
     ) {
       side.classList.add("side-active");
-          }
+      svg.forEach((svg) => {
+        svg.style.backgroundColor = "black";
+      });
+      svgRing.style.stroke = "black";
+    }
   });
 });
+
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("is-open");
   hamburger.classList.toggle("is-closed");
   if (hamburger.classList.contains("is-open")) {
     side.style.display = "flex";
+    svg.forEach((svg) => {
+      svg.style.background = "white";
+    });
+    svgRing.style.stroke = "white";
   }
   if (hamburger.classList.contains("is-closed")) {
     side.style.display = "none";
+    svg.forEach((svg) => {
+      svg.style.backgroundColor = "black";
+    });
+    svgRing.style.stroke = "black";
   }
 });
 
@@ -83,7 +104,6 @@ const onSubmit = () => {
     text,
   };
   try {
-    
     fetch("https://main-be-nv16.onrender.com/portfolio/contact", {
       method: "POST",
       body: JSON.stringify(data),
@@ -92,8 +112,37 @@ const onSubmit = () => {
       },
     })
       .then((res) => res.json())
-      .catch(err=>console.log(err));
+      .catch((err) => console.log(err));
   } catch (error) {
     console.log(error);
   }
 };
+
+// log when scroll
+window.addEventListener("scroll", () => {
+  if (
+    (window.scrollY > 0 &&
+      window.scrollY < 640 &&
+      !hamburger.classList.contains("is-open")) ||
+    (window.scrollY > 2160 &&
+      window.scrollY < 3040 &&
+      !hamburger.classList.contains("is-open"))
+  ) {
+    svg.forEach((svg) => {
+      svg.style.background = "black";
+    });
+    svgRing.style.stroke = "black";
+  } else if (
+    (window.scrollY > 640 &&
+      window.scrollY < 2160 &&
+      !hamburger.classList.contains("is-open")) ||
+    (window.scrollY > 3040 &&
+      window.scrollY < 3100 &&
+      !hamburger.classList.contains("is-open"))
+  ) {
+    svg.forEach((svg) => {
+      svg.style.background = "white";
+    });
+    svgRing.style.stroke = "white";
+  }
+});

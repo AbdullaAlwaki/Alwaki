@@ -1,3 +1,11 @@
+html{
+  scroll-behavior: smooth;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 body {
   background-color: rgb(255, 255, 255);
   color: rgb(255, 255, 255);
@@ -24,18 +32,18 @@ span {
   transition: 0.8s;
 }
 
-.side-active{
+.side-active {
   background-color: rgb(255, 255, 255);
   color: #000;
   transition: 0.8s;
 }
 
-.side-active li{
+.side-active li {
   color: #000;
   transition: 0.8s;
 }
 
-.side-active li:hover{
+.side-active li:hover {
   background: #000;
   color: #fff;
   transition: 0.8s;
@@ -66,8 +74,7 @@ li {
   border-bottom: 1px solid #fff;
 }
 
-
-li::after{
+li::after {
   position: absolute;
   content: "";
   top: 0;
@@ -75,7 +82,7 @@ li::after{
   width: 0;
   height: 100%;
   background: #ff003b;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 li:hover {
   background-color: rgb(255, 255, 255);
@@ -90,7 +97,7 @@ li:hover {
   border: none;
 }
 
-.t{
+.t {
   animation: op;
   animation-duration: 1s;
 }
@@ -120,9 +127,7 @@ li:hover {
   100% {
     background: #000;
   }
-  
 }
-
 
 .home {
   width: 75%;
@@ -139,7 +144,6 @@ li:hover {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
 }
 
 h1 {
@@ -213,64 +217,63 @@ p {
   align-items: flex-start;
 }
 
-.projects{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.project{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 30vh;
-    margin: 1%;
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 30vh;
+  margin: 1%;
 }
-h1{
-    text-align: center;
-    margin-bottom: 2%;
+h1 {
+  text-align: center;
+  margin-bottom: 2%;
 }
-.p{
-    text-align: center;
-    margin-bottom: 2%;
+.p {
+  text-align: center;
+  margin-bottom: 2%;
 }
-.project-a{
-    all : unset;
-    cursor: pointer;
-    color: rgb(0, 68, 255);
+.project-a {
+  all: unset;
+  cursor: pointer;
+  color: rgb(0, 68, 255);
 }
-.project-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#Contact{
-    width: 70%;
-    height: 100vh;
-    padding-left: 30%;
-    background: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+#Contact {
+  width: 70%;
+  height: 100vh;
+  padding-left: 30%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* contact form */
-#Contact{
-    width: 70%;
-    height: 100vh;
-    padding-left: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#Contact {
+  width: 70%;
+  height: 100vh;
+  padding-left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 form {
   width: 100%;
@@ -314,14 +317,12 @@ input[type="submit"]:hover {
   border: 1px solid #ff003b;
 }
 
-
 /* Humburger menu */
 
 .hamburglar {
   position: relative;
   width: 68px;
   height: 68px;
-  background: black;
   display: none;
 }
 
@@ -433,10 +434,14 @@ input[type="submit"]:hover {
   width: 68px;
   height: 68px;
 }
-
+.svg {
+  background: #000000;
+}
 .svg-ring {
   width: 68px;
   height: 68px;
+  fill: none;
+  stroke: #000000;
 }
 
 .hamburglar.is-open .burger-bun-top {
@@ -597,83 +602,94 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 750px) {
   .hamburglar {
     display: block;
-    position: sticky;
+    position: fixed;
+    top: auto;
+    z-index: 100;
   }
-  .side{
+  .side {
     display: none;
     width: 100%;
+    animation: identifier 0.5s ease-in-out;
   }
-  #main{
-    width: 100%;
-    padding-left: 0px;
-  }
-  .home ,
-  #about,
-  #Portfolio,
-  #Contact{
-    padding: 0px;
-    margin: auto;
-    width: 100%;
-    height: 100%;
+  @keyframes identifier {
+    0% {
+      transform: translateX(-100%);
     }
-
-    .home{
-      height: 100vh;
-      font-size: 15px;  
-  }
-  .home h1{
-    font-size: 30px;
-  }
-  .home h2{
-    font-size: 20px;
-  }
-  #about{
-    height: 100%;
-    font-size: 15px;
-  }
-  .about-content{
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-div{
-    width: 80%;
-    margin: 20px;
-  }
-  .about-div h3{
-    font-size: 30px;
-  }
-  .about-div p {
-    font-size: 20px;
-    text-align: center;
+    100% {
+      transform: translateX(0);
+    }
   }
 
-  .about-img{
-    padding-bottom: 20px;
-  }
+#main {
+  width: 100%;
+  padding-left: 0px;
+}
+.home,
+#about,
+#Portfolio,
+#Contact {
+  padding: 0px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
 
-  #Portfolio{
-    height: 100%;
-    font-size: 15px;
-  }
-  .project{
-    width: 100%;
-    margin: 20px;
-    text-align: center;
-  }
-  .project a{
-    font-size: 20px;
-  }
-  .project img {
-    width: 80%;
-  }
-  #Contact{
-    height: 100vh;
-  }
-  input[type="text"],
-  input[type="email"],
-  #text,
-  input[type="submit"]
-  {
-    width: 80%
-  }
+.home {
+  height: 100vh;
+  font-size: 15px;
+}
+.home h1 {
+  font-size: 30px;
+}
+.home h2 {
+  font-size: 20px;
+}
+#about {
+  height: 100%;
+  font-size: 15px;
+}
+.about-content {
+  flex-direction: column;
+  align-items: center;
+}
+.about-div {
+  width: 80%;
+  margin: 20px;
+}
+.about-div h3 {
+  font-size: 30px;
+}
+.about-div p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.about-img {
+  padding-bottom: 20px;
+}
+
+#Portfolio {
+  height: 100%;
+  font-size: 15px;
+}
+.project {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+.project a {
+  font-size: 20px;
+}
+.project img {
+  width: 80%;
+}
+#Contact {
+  height: 100vh;
+}
+input[type="text"],
+input[type="email"],
+#text,
+input[type="submit"] {
+  width: 80%;
+}
 }
