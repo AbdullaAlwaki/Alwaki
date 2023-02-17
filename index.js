@@ -10,16 +10,36 @@ const hamburger = document.querySelector("#hamburger");
 const svg = document.querySelectorAll(".svg");
 const svgRing = document.querySelector(".svg-ring");
 const img = document.querySelector(".img");
-const radio = document.querySelectorAll(" .radio");
+const radio1 = document.querySelector("#radio1");
+const radio2 = document.querySelector("#radio2");
+const radio3 = document.querySelector("#radio3");
+const con1 = document.querySelector(".con1");
+const con2 = document.querySelector(".con2");
+const con3 = document.querySelector(".con3");
 
-console.log(radio);
+radio1.addEventListener("click", () => {
+  con1.style.display = "flex";
+  con2.style.display = "none";
+  con3.style.display = "none";
+});
+radio2.addEventListener("click", () => {
+  con1.style.display = "none";
+  con2.style.display = "flex";
+  con3.style.display = "none";
+});
+
+radio3.addEventListener("click", () => {
+  con1.style.display = "none";
+  con2.style.display = "none";
+  con3.style.display = "flex";
+});
 
 const projects = [
   {
     title: "Restaurant Website",
     img: "./images/restaurant.gif",
     description:
-      "In this project I built a website for a restaurant using frontend and backend technologies",
+    "In this project I built a website for a restaurant using frontend and backend technologies",
     link: "https://mern-restaurant.onrender.com/",
     number: 1,
   },
@@ -42,20 +62,20 @@ const projects = [
 const port = `<div class="con">
 <img class="img" src="${projects[0].img}" alt="" />
 <div class="text">
-    <h2>${projects[0].title}</h2>
-    <p>${projects[0].description}</p>
-    <a href="${projects[0].link}" target="_blank">View Project</a>
-  </div>
+<h2>${projects[0].title}</h2>
+<p>${projects[0].description}</p>
+<a href="${projects[0].link}" target="_blank">View Project</a>
+</div>
 </div>
 <div class="img-end">
-  ${projects.map((project) => {
-    return `
+${projects.map((project) => {
+  return `
     <label for="${project.number}" ><img class="small-img" src="${project.img}" alt="" /> </label>
     <input type="radio" name="radio" id="${project.number}" class="radio"/>`;
   })}
-</div>
-`;
-
+  </div>
+  `;
+  
 active.forEach((link) => {
   link.addEventListener("click", () => {
     active.forEach((link) => {
@@ -101,8 +121,8 @@ const onSubmit = () => {
         "Content-Type": "application/json",
       },
     })
-      .then((res) => res.json())
-      .catch((err) => console.log(err));
+    .then((res) => res.json())
+    .catch((err) => console.log(err));
   } catch (error) {
     console.log(error);
   }
@@ -113,9 +133,9 @@ window.addEventListener("scroll", () => {
   if (
     (window.scrollY > 0 && window.scrollY < 700) ||
     (window.scrollY > 1700 && window.scrollY < 2600)
-  ) {
-    side.classList.remove("side-active");
-    side.classList.add("side");
+    ) {
+      side.classList.remove("side-active");
+      side.classList.add("side");
   } else if (
     (window.scrollY > 700 && window.scrollY < 1700) ||
     (window.scrollY > 2600 && window.scrollY < 3100)
@@ -126,10 +146,10 @@ window.addEventListener("scroll", () => {
     (window.scrollY > 0 &&
       window.scrollY < 640 &&
       !hamburger.classList.contains("is-open")) ||
-    (window.scrollY > 2160 &&
-      window.scrollY < 3040 &&
-      !hamburger.classList.contains("is-open"))
-  ) {
+      (window.scrollY > 2160 &&
+        window.scrollY < 3040 &&
+        !hamburger.classList.contains("is-open"))
+        ) {
     svg.forEach((svg) => {
       svg.style.background = "black";
     });
@@ -138,12 +158,12 @@ window.addEventListener("scroll", () => {
     (window.scrollY > 640 &&
       window.scrollY < 2160 &&
       !hamburger.classList.contains("is-open")) ||
-    (window.scrollY > 3040 &&
-      window.scrollY < 3100 &&
-      !hamburger.classList.contains("is-open"))
-  ) {
-    svg.forEach((svg) => {
-      svg.style.background = "white";
+      (window.scrollY > 3040 &&
+        window.scrollY < 3100 &&
+        !hamburger.classList.contains("is-open"))
+        ) {
+          svg.forEach((svg) => {
+            svg.style.background = "white";
     });
     svgRing.style.stroke = "white";
   }
