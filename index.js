@@ -9,42 +9,53 @@ const portfolioLi = document.querySelector(".li-Portfolio");
 const hamburger = document.querySelector("#hamburger");
 const svg = document.querySelectorAll(".svg");
 const svgRing = document.querySelector(".svg-ring");
+const img = document.querySelector(".img");
+const radio = document.querySelectorAll(" .radio");
+
+console.log(radio);
 
 const projects = [
   {
     title: "Restaurant Website",
     img: "./images/restaurant.gif",
-    description: "In this project I built a website for a restaurant using frontend and backend technologies",
+    description:
+      "In this project I built a website for a restaurant using frontend and backend technologies",
     link: "https://mern-restaurant.onrender.com/",
+    number: 1,
   },
   {
     title: "video player",
     img: "./images/player.gif",
     description: "Project 2 description",
-    link: "https://abdullaalwaki.github.io/videoplyer/"
+    link: "https://abdullaalwaki.github.io/videoplyer/",
+    number: 2,
   },
   {
     title: "Project 3",
     img: "./images/Ramadantimer.gif",
     description: "Project 3 description",
-    link: "https://abdullaalwaki.github.io/RamadanTimer/"
+    link: "https://abdullaalwaki.github.io/RamadanTimer/",
+    number: 3,
   },
 ];
-const port = `
-<h1 class="port">Portfolio</h1>
-        <p class="p">Here are some of my projects</p>
-        <div class="projects">
-        ${projects.map((project) => {
-          return `<div class="project">
-                    <h2>${project.title}</h2>
-                    <img src="${project.img}" alt="${project.title}" class="project-img">
-                    <p>${project.description}</p>   
-                    <a href="${project.link}" target="_blank" class="project-a">View Project</a>
-                </div>`;
-        })}</div>
-        </div>`;
 
-portfolio.innerHTML = port;
+const port = `<div class="con">
+<img class="img" src="${projects[0].img}" alt="" />
+<div class="text">
+    <h2>${projects[0].title}</h2>
+    <p>${projects[0].description}</p>
+    <a href="${projects[0].link}" target="_blank">View Project</a>
+  </div>
+</div>
+<div class="img-end">
+  ${projects.map((project) => {
+    return `
+    <label for="${project.number}" ><img class="small-img" src="${project.img}" alt="" /> </label>
+    <input type="radio" name="radio" id="${project.number}" class="radio"/>`;
+  })}
+</div>
+`;
+
 active.forEach((link) => {
   link.addEventListener("click", () => {
     active.forEach((link) => {
@@ -99,10 +110,16 @@ const onSubmit = () => {
 
 // log when scroll
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 0 && window.scrollY < 700 || window.scrollY > 1700 && window.scrollY < 2600) {
+  if (
+    (window.scrollY > 0 && window.scrollY < 700) ||
+    (window.scrollY > 1700 && window.scrollY < 2600)
+  ) {
     side.classList.remove("side-active");
     side.classList.add("side");
-    } else if( window.scrollY > 700 && window.scrollY < 1700 || window.scrollY > 2600 && window.scrollY < 3100) {
+  } else if (
+    (window.scrollY > 700 && window.scrollY < 1700) ||
+    (window.scrollY > 2600 && window.scrollY < 3100)
+  ) {
     side.classList.add("side-active");
   }
   if (
