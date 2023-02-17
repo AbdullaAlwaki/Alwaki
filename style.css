@@ -238,7 +238,14 @@ p {
 }
 
 #radio1:checked ~ .con1{
+  position: absolute;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
+}
+
+#radio1:checked ~ .con1 img{
+  height: auto;
 }
 
 #radio2:checked ~ .con2{
@@ -263,6 +270,8 @@ p {
 }
 
 .img-end{
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
