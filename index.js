@@ -34,48 +34,8 @@ radio3.addEventListener("click", () => {
   con3.style.display = "flex";
 });
 
-const projects = [
-  {
-    title: "Restaurant Website",
-    img: "./images/restaurant.gif",
-    description:
-    "In this project I built a website for a restaurant using frontend and backend technologies",
-    link: "https://mern-restaurant.onrender.com/",
-    number: 1,
-  },
-  {
-    title: "video player",
-    img: "./images/player.gif",
-    description: "Project 2 description",
-    link: "https://abdullaalwaki.github.io/videoplyer/",
-    number: 2,
-  },
-  {
-    title: "Project 3",
-    img: "./images/Ramadantimer.gif",
-    description: "Project 3 description",
-    link: "https://abdullaalwaki.github.io/RamadanTimer/",
-    number: 3,
-  },
-];
 
-const port = `<div class="con">
-<img class="img" src="${projects[0].img}" alt="" />
-<div class="text">
-<h2>${projects[0].title}</h2>
-<p>${projects[0].description}</p>
-<a href="${projects[0].link}" target="_blank">View Project</a>
-</div>
-</div>
-<div class="img-end">
-${projects.map((project) => {
-  return `
-    <label for="${project.number}" ><img class="small-img" src="${project.img}" alt="" /> </label>
-    <input type="radio" name="radio" id="${project.number}" class="radio"/>`;
-  })}
-  </div>
-  `;
-  
+////////////////////////
 active.forEach((link) => {
   link.addEventListener("click", () => {
     active.forEach((link) => {
@@ -85,6 +45,7 @@ active.forEach((link) => {
   });
 });
 
+//////////////////////
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("is-open");
   hamburger.classList.toggle("is-closed");
