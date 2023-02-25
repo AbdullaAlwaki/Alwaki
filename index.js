@@ -85,8 +85,7 @@ form.addEventListener("submit", (e) => {
       body: JSON.stringify(data),
     })
     .then((res) => res.json())
-    .catch((err) => console.log(err));
-    console.log(data);
+    .then(data => console.log(data));
   } catch (error) {
     console.log(error);
   }
