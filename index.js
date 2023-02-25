@@ -16,6 +16,7 @@ const radio3 = document.querySelector("#radio3");
 const con1 = document.querySelector(".con1");
 const con2 = document.querySelector(".con2");
 const con3 = document.querySelector(".con3");
+const form = document.querySelector("form");
 
 radio1.addEventListener("click", () => {
   con1.style.display = "flex";
@@ -64,8 +65,9 @@ hamburger.addEventListener("click", function () {
     svgRing.style.stroke = "black";
   }
 });
-
-const onSubmit = () => {
+  
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   let name = document.querySelector("#name").value;
   let email = document.querySelector("#email").value;
   let text = document.querySelector("#text").value;
@@ -84,10 +86,12 @@ const onSubmit = () => {
     })
     .then((res) => res.json())
     .catch((err) => console.log(err));
+    console.log(data);
   } catch (error) {
     console.log(error);
   }
-};
+});
+
 
 // log when scroll
 window.addEventListener("scroll", () => {
