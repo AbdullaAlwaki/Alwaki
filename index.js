@@ -17,6 +17,7 @@ const con1 = document.querySelector(".con1");
 const con2 = document.querySelector(".con2");
 const con3 = document.querySelector(".con3");
 const form = document.querySelector("form");
+const message = document.querySelector(".message");
 
 radio1.addEventListener("click", () => {
   con1.style.display = "flex";
@@ -34,7 +35,6 @@ radio3.addEventListener("click", () => {
   con2.style.display = "none";
   con3.style.display = "flex";
 });
-
 
 ////////////////////////
 active.forEach((link) => {
@@ -65,7 +65,9 @@ hamburger.addEventListener("click", function () {
     svgRing.style.stroke = "black";
   }
 });
-  
+
+let state;
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let name = document.querySelector("#name").value;
@@ -75,31 +77,39 @@ form.addEventListener("submit", (e) => {
     name,
     email,
     text,
-  };
+  }; /* https://main-be-nv16.onrender.com */
   try {
-    fetch("https://main-be-nv16.onrender.com/portfolio/contact", {
+    fetch("http://localhost:10000/portfolio/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-    .then((res) => res.json())
-    .then(data => console.log(data));
+      .then((res) => res.json())
+      .then((data) => (state = data))
+      .catch((err) => (state = err));
+    console.log(state.error);
   } catch (error) {
     console.log(error);
   }
+  setTimeout(() => {
+    if (state.error) {
+      message.textContent = state?.error;
+    } else {
+      message.textContent = state?.message;
+    }
+  }, 1000);
 });
-
 
 // log when scroll
 window.addEventListener("scroll", () => {
   if (
     (window.scrollY > 0 && window.scrollY < 700) ||
     (window.scrollY > 1700 && window.scrollY < 2600)
-    ) {
-      side.classList.remove("side-active");
-      side.classList.add("side");
+  ) {
+    side.classList.remove("side-active");
+    side.classList.add("side");
   } else if (
     (window.scrollY > 700 && window.scrollY < 1700) ||
     (window.scrollY > 2600 && window.scrollY < 3100)
@@ -110,10 +120,10 @@ window.addEventListener("scroll", () => {
     (window.scrollY > 0 &&
       window.scrollY < 640 &&
       !hamburger.classList.contains("is-open")) ||
-      (window.scrollY > 2160 &&
-        window.scrollY < 3040 &&
-        !hamburger.classList.contains("is-open"))
-        ) {
+    (window.scrollY > 2160 &&
+      window.scrollY < 3040 &&
+      !hamburger.classList.contains("is-open"))
+  ) {
     svg.forEach((svg) => {
       svg.style.background = "black";
     });
@@ -122,12 +132,12 @@ window.addEventListener("scroll", () => {
     (window.scrollY > 640 &&
       window.scrollY < 2160 &&
       !hamburger.classList.contains("is-open")) ||
-      (window.scrollY > 3040 &&
-        window.scrollY < 3100 &&
-        !hamburger.classList.contains("is-open"))
-        ) {
-          svg.forEach((svg) => {
-            svg.style.background = "white";
+    (window.scrollY > 3040 &&
+      window.scrollY < 3100 &&
+      !hamburger.classList.contains("is-open"))
+  ) {
+    svg.forEach((svg) => {
+      svg.style.background = "white";
     });
     svgRing.style.stroke = "white";
   }
