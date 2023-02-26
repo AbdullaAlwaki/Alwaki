@@ -77,9 +77,9 @@ form.addEventListener("submit", (e) => {
     name,
     email,
     text,
-  }; /* https://main-be-nv16.onrender.com */
+  };
   try {
-    fetch("http://localhost:10000/portfolio/contact", {
+    fetch("https://main-be-nv16.onrender.com/portfolio/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
