@@ -1,13 +1,13 @@
 - 👋 Hi, I’m @AbdullaAlwaki
 - 👀 I’m interested in Coding
-- 🌱 I’m currently learning web Developer 
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 🌱 I’m currently looking for job as web Developer 
+- 💞️ I’m looking to collaborate on 
+- 📫 How to reach me [My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/)
 ![alt text](../../Downloads/image.jpg)
 
 # Abdulla Alwaki
 
-## Life in Berlin
+## Live in Berlin
 
 ---
 
@@ -31,15 +31,16 @@ _Naitonality_
 2. python
 3. html
 4. css
+5. Type Script
 
 ---
 
 ## project
 
-- videoplayer
-- Ramadan timer
-- ScrapingWikipedia
-
+- [videoplayer](https://abdullaalwaki.github.io/videoplyer/)
+- [AHA Store](https://yalla.onrender.com/)
+- [ScrapingWikipedia](https://github.com/AbdullaAlwaki/ScrapingWikipedia/blob/main/My%20Project.ipynb)
+- [MERN Restaurant](https://mern-restaurant.onrender.com/)
 ---
 
 ## `code js`
