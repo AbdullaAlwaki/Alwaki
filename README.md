@@ -38,7 +38,7 @@ _Naitonality_
 ## project
 
 - [videoplayer](https://abdullaalwaki.github.io/videoplyer/)
-- ![AHA Store](https://aha-store.com/)
+- [AHA Store](https://aha-store.com/)
 - [ScrapingWikipedia](https://github.com/AbdullaAlwaki/ScrapingWikipedia/blob/main/My%20Project.ipynb)
 - [MERN Restaurant](https://mern-restaurant.onrender.com/)
 ---
