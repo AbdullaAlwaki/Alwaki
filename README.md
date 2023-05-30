@@ -3,7 +3,7 @@
 - 🌱 I’m currently looking for job as web Developer 
 - 💞️ I’m looking to collaborate on 
 - 📫 How to reach me [My Webseit](https://abdullaalwaki.github.io/AbdullaAlwaki/)
-![alt text](../../Downloads/image.jpg)
+
 
 # Abdulla Alwaki
 
@@ -38,7 +38,7 @@ _Naitonality_
 ## project
 
 - [videoplayer](https://abdullaalwaki.github.io/videoplyer/)
-- [AHA Store](https://aha-store.com/)
+- ![AHA Store](https://aha-store.com/)
 - [ScrapingWikipedia](https://github.com/AbdullaAlwaki/ScrapingWikipedia/blob/main/My%20Project.ipynb)
 - [MERN Restaurant](https://mern-restaurant.onrender.com/)
 ---
