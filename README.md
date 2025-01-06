@@ -33,18 +33,25 @@ I’m actively seeking opportunities to bring my skills and creativity to dynami
 
 ### 🚀 Projects  
 
+- **[Alwaki Store](https://alwakistore.onrender.com/)**: A modern e-commerce platform with a clean and responsive design. 
 - **[Video Player](https://abdullaalwaki.github.io/videoplyer/)**: A custom video player for web applications.  
-- **[Alwaki Store](https://alwakistore.onrender.com/)**: An e-commerce platform with user-friendly design.
-- **[Areeg Money Service](https://areegmoneyservice.com/)**: An e-commerce platform with user-friendly design.  
-- **[Scraping Wikipedia](https://github.com/AbdullaAlwaki/ScrapingWikipedia/blob/main/My%20Project.ipynb)**: A Python-based project for data scraping.  
-- **[MERN Restaurant](https://mern-restaurant.onrender.com/)**: A full-stack restaurant management system using the MERN stack.  
+- **[Areeg Money Service](https://areegmoneyservice.com/)**: A financial service website offering efficient money transfer options.  
+- **[Scraping Wikipedia](https://github.com/AbdullaAlwaki/ScrapingWikipedia/blob/main/My%20Project.ipynb)**: A Python-based project for extracting data from Wikipedia.  
+- **[MERN Restaurant](https://mern-restaurant.onrender.com/)**: A full-stack restaurant management system built using the MERN stack.  
 
 ---  
 
 ### 💻 Code Snippet  
 
+Here’s a simple yet dynamic JavaScript function:  
+
 ```javascript
+// Function to greet a user with dynamic time-based messages
 const greet = (name) => {
-  console.log(`Hello, ${name}!`);
+  const hour = new Date().getHours();
+  const timeOfDay = hour < 12 ? 'Morning' : hour < 18 ? 'Afternoon' : 'Evening';
+  console.log(`Good ${timeOfDay}, ${name}!`);
 };
-greet('World');
+
+// Test the function
+greet('Abdulla');
