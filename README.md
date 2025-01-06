@@ -34,7 +34,8 @@ I’m actively seeking opportunities to bring my skills and creativity to dynami
 ### 🚀 Projects  
 
 - **[Video Player](https://abdullaalwaki.github.io/videoplyer/)**: A custom video player for web applications.  
-- **[AHA Store](https://aha-store.com/)**: An e-commerce platform with user-friendly design.  
+- **[Alwaki Store](https://alwakistore.onrender.com/)**: An e-commerce platform with user-friendly design.
+- **[Areeg Money Service](https://areegmoneyservice.com/)**: An e-commerce platform with user-friendly design.  
 - **[Scraping Wikipedia](https://github.com/AbdullaAlwaki/ScrapingWikipedia/blob/main/My%20Project.ipynb)**: A Python-based project for data scraping.  
 - **[MERN Restaurant](https://mern-restaurant.onrender.com/)**: A full-stack restaurant management system using the MERN stack.  
 
